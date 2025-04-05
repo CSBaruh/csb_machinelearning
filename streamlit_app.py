@@ -61,3 +61,4 @@ with st.expander('Input features'):
   st.write('**Input**')
   input_df
   st.write('**Combined**')
+  input_sales 
