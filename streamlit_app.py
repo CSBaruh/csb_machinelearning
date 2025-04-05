@@ -65,6 +65,6 @@ with st.expander('Input features'):
 
 # Encode
 
-#encode = ['product_name', 'payment_method']
-df_sales = pd.get_dummies(input_sales, prefix=['product_name', 'payment_method'])
+encode = ['product_name']
+df_sales = pd.get_dummies(input_sales, prefix=encode)
 df_sales
