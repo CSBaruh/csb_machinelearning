@@ -10,10 +10,9 @@ with st.expander('Data'):
   df = pd.read_csv('https://raw.githubusercontent.com/CSBaruh/Datas/refs/heads/main/synthetic_online_retail_data.csv')
   df
   
-
-st.write('**X**')
+  st.write('**X**')
   X = df.drop('category_name', axis=1)
-  X
+   X
 
   st.write('**y**')
   y = df.category_name
