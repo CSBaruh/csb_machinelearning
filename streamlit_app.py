@@ -61,4 +61,10 @@ with st.expander('Input features'):
   st.write('**Input**')
   input_df
   st.write('**Combined**')
-  input_sales 
+  input_sales
+
+# Encode
+
+encode = ['product_name', 'payment_method']
+df_sales = pd.get_dummies[input_sales, prefix=encode]
+df_sales
