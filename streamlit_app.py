@@ -22,7 +22,7 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  X = df.drop('quantity', axis=1)
+  X = df.drop('category_name', axis=1)
   X
 
   st.write('**y**')
