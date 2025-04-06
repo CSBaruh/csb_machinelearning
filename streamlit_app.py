@@ -22,12 +22,12 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  X = df.drop('quantity', axis=1)
+  X = df.drop('category_name', axis=1)
   #X = df.order_date
   X
 
   st.write('**y**')
-  y = df.quantity
+  y = df.category_name
   y
   
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
@@ -70,13 +70,21 @@ with st.sidebar:
   input_df = pd.DataFrame(data, index=[0])
   input_sales = pd.concat([input_df, X], axis=0)
   
-  # Encode
-  encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
-  df_sales = pd.get_dummies(input_sales, prefix=encode)
-  input_row = df_sales[:1]
+# Encode X
+encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
+df_sales = pd.get_dummies(input_sales, prefix=encode)
+input_row = df_sales[:1]
 
+# Encode y
+target_mapper = {'Electronics' : 0
+                 , 'Sports & Outdoors': 1
+                 , 'Books & Stationery': 2
+                 , 'Fashion':3
+                 , 'Home & Living': 4
+                }
 
-
+def target_encode(val):
+  return target_mapper[val]
 
 with st.expander('Input features'):
   st.write('**Input**')
