@@ -24,7 +24,7 @@ with st.expander('Data'):
   st.write('**X**')
   X_raw = df.drop('category_name', axis=1)
   #X = df.order_date
-  X-aw
+  X_raw
 
   st.write('**y**')
   y_raw = df.category_name
