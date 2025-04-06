@@ -127,7 +127,7 @@ df_prediction_proba.rename(columns={0: 'Electronics',
 # Display predicted sales
 st.subheader('Predicted Sales')
 sales_categories = np.array(['Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living'])
-st.success(str(sales_categories[prediction][0]))
+st.success(str(sales_categories[predicition][0]))
 
 
 
