@@ -51,7 +51,7 @@ with st.sidebar:
         'product_name': product_name,
         'price': price,
         'payment_method': payment_method,
-        'city': city,
+        # 'city': city,
         'gender': gender,
         'age': age}
   input_df = pd.DataFrame(data, index=[0])
