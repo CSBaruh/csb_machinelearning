@@ -126,7 +126,7 @@ df_prediction_proba.rename(columns={0: 'Electronics',
 
 # Display predicted sales
 st.subheader('Predicted Sales')
-st.DataFrame(df_prediction_proba,
+st.dataframe(df_prediction_proba,
              column_config={
                'Electronics': st.column_config.ProgressColumn(
                  'Electronics',
