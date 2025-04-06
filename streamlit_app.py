@@ -113,9 +113,11 @@ clf.fit(X,y)
 ## Apply model to make predictions
 predicition = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)
-prediction_proba.columns = ['Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living']
+#prediction_proba.columns = ['Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living']
 
 df_prediction_proba = pd.Dataframe(prediction_proba)
+df_prediction_proba.colmn = ['Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living']
+df_prediction_proba
 
 
 
