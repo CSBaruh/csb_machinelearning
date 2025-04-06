@@ -47,8 +47,7 @@ with st.sidebar:
 
 
 # Create a Dataframe for the input features
-  data = {'category_name': category_name,
-        'product_name': product_name,
+  data = {'product_name': product_name,
         'price': price,
         'payment_method': payment_method,
         # 'city': city,
@@ -58,7 +57,7 @@ with st.sidebar:
   input_sales = pd.concat([input_df, X], axis=0)
   
   # Encode
-  encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
+  encode = ['product_name', 'price', 'payment_method', 'gender', 'age']
   df_sales = pd.get_dummies(input_sales, prefix=encode)
   input_row = df_sales[:1]
 
