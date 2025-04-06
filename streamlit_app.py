@@ -22,13 +22,13 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  X = df.drop('category_name', axis=1)
+  X_raw = df.drop('category_name', axis=1)
   #X = df.order_date
-  X
+  X-aw
 
   st.write('**y**')
-  y = df.category_name
-  y
+  y_raw = df.category_name
+  y_raw
   
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
 with st.expander('Data Visualization'):
@@ -68,7 +68,7 @@ with st.sidebar:
         'gender': gender,
         'age': age}
   input_df = pd.DataFrame(data, index=[0])
-  input_sales = pd.concat([input_df, X], axis=0)
+  input_sales = pd.concat([input_df, X_raw], axis=0)
   
 # Encode X
 encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
