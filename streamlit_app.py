@@ -126,7 +126,45 @@ df_prediction_proba.rename(columns={0: 'Electronics',
 
 # Display predicted sales
 st.subheader('Predicted Sales')
-df_prediction_proba
+st.DataFrame(df_prediction_proba,
+             column_config={
+               'Electronics': st.column_config.ProgressColumn(
+                 'Electronics',
+                 format='%f',
+                 wifth='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+              'Sports & Outdoors': st.column_config.ProgressColumn(
+                 'Electronics',
+                 format='%f',
+                 wifth='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+              'Books & Stationery': st.column_config.ProgressColumn(
+                 'Books & Stationery',
+                 format='%f',
+                 wifth='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+              'Fashion': st.column_config.ProgressColumn(
+                 'Fashion',
+                 format='%f',
+                 wifth='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+              'Home & Living': st.column_config.ProgressColumn(
+                 'Home & Living',
+                 format='%f',
+                 wifth='medium',
+                 min_value=0,
+                 max_value=1
+               )
+             }, hide_index=True)
+
 
 sales_categories = np.array(['Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living'])
 st.success(str(sales_categories[predicition][0]))
