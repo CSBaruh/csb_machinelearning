@@ -31,16 +31,16 @@ with st.sidebar:
                                                , 'Pants', 'T-shirt', 'Running Shoes'))
   price = st.slider('Price', 18, 480, 230)
   payment_method = st.selectbox('Payment Method', ('Credit Card', 'Bank Transfer', 'Cash on Delivery'))
-  city = st.selectbox('City', ('New Oliviaberg', 'Port Matthew', 'West Sarah', 'Hernandezburgh', 'Jenkinshaven', 'East Tonyaberg', 'North Jessicabury'
-                              , 'Aliciaberg', 'West Larrymouth', 'Lake Ian', 'Elizabethmouth', 'Melanieberg', 'Allisonland', 'Myershaven', 'South Tonya'
-                              , 'Port Allisonfort', 'Levyport', 'Fullerland', 'North Anthony', 'North Whitneytown', 'West Cynthiaton', 'East Christopher'
-                              , 'Port Danielleview', 'East Christopherborough', 'Douglasport', 'North Jamesside', 'North Carrie', 'Port Kenneth'
-                              , 'East Kylie', 'Mendezburgh', 'Kristenland', 'Lake Sarah', 'Fryeberg', 'Lake Michael', 'North Mary', 'Cynthiaport'
-                              , 'East Corytown', 'Martinezview', 'North Terrancehaven', 'Lake Rhondatown', 'Williamston', 'Lake Jeffrey', 'New Carolfort'
-                              , 'Franklinmouth', 'New Terri', 'Jeffreyview', 'Teresaville', 'Mcdonaldmouth', 'West Geraldhaven', 'West Geraldhaven', 'Walkerland'
-                              , 'Port Patriciashire', 'Jacobburgh', 'New Brittanytown', 'Woodshaven', 'Rachelland', 'Gonzalezshire', 'Blakeshire', 'Whitakerview'
-                              , 'Port Thomaston', 'New Jeremy', 'Lake Nancy', 'Lake Jasmineport', 'Garrisonberg', 'South Katherineside', 'Mccallhaven', 'Lake Teresafurt'
-                              , 'Roymouth', 'East Charles', 'West Krista', 'Hobbston', 'Jacobfurt', 'New Felicia', 'Spencerside', 'West Jacob'))
+  # city = st.selectbox('City', ('New Oliviaberg', 'Port Matthew', 'West Sarah', 'Hernandezburgh', 'Jenkinshaven', 'East Tonyaberg', 'North Jessicabury'
+  #                            , 'Aliciaberg', 'West Larrymouth', 'Lake Ian', 'Elizabethmouth', 'Melanieberg', 'Allisonland', 'Myershaven', 'South Tonya'
+  #                           , 'Port Allisonfort', 'Levyport', 'Fullerland', 'North Anthony', 'North Whitneytown', 'West Cynthiaton', 'East Christopher'
+  #                            , 'Port Danielleview', 'East Christopherborough', 'Douglasport', 'North Jamesside', 'North Carrie', 'Port Kenneth'
+  #                            , 'East Kylie', 'Mendezburgh', 'Kristenland', 'Lake Sarah', 'Fryeberg', 'Lake Michael', 'North Mary', 'Cynthiaport'
+  #                            , 'East Corytown', 'Martinezview', 'North Terrancehaven', 'Lake Rhondatown', 'Williamston', 'Lake Jeffrey', 'New Carolfort'
+  #                            , 'Franklinmouth', 'New Terri', 'Jeffreyview', 'Teresaville', 'Mcdonaldmouth', 'West Geraldhaven', 'West Geraldhaven', 'Walkerland'
+  #                            , 'Port Patriciashire', 'Jacobburgh', 'New Brittanytown', 'Woodshaven', 'Rachelland', 'Gonzalezshire', 'Blakeshire', 'Whitakerview'
+  #                            , 'Port Thomaston', 'New Jeremy', 'Lake Nancy', 'Lake Jasmineport', 'Garrisonberg', 'South Katherineside', 'Mccallhaven', 'Lake Teresafurt'
+  #                            , 'Roymouth', 'East Charles', 'West Krista', 'Hobbston', 'Jacobfurt', 'New Felicia', 'Spencerside', 'West Jacob'))
   gender = st.selectbox('Gender', ('M', 'F'))
   age = st.slider('Age', 18, 75, 28)
 
@@ -58,7 +58,7 @@ with st.sidebar:
   input_sales = pd.concat([input_df, X], axis=0)
   
   # Encode
-  encode = ['category_name', 'product_name', '', 'payment_method', 'gender', 'age']
+  encode = ['category_name', 'product_name', 'payment_method', 'gender', 'age']
   df_sales = pd.get_dummies(input_sales, prefix=encode)
   input_row = df_sales[:1]
 
