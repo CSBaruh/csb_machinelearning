@@ -58,7 +58,8 @@ with st.sidebar:
 
 
 # Create a Dataframe for the input features
-  data = {'product_name': product_name,
+  data = {'category_name': category_name,
+        'product_name': product_name,
         'price': price,
         'payment_method': payment_method,
         # 'city': city,
