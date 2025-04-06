@@ -22,8 +22,8 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  #X = df.drop('quantity', axis=1)
-  X = df.order_date
+  X = df.drop('quantity', axis=1)
+  #X = df.order_date
   X
 
   st.write('**y**')
@@ -33,7 +33,7 @@ with st.expander('Data'):
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
 with st.expander('Data Visualization'):
   #st.scatter_chart(data=df, x='quantity', y= 'product_name', color= 'category_name')
-  st.line_chart(df, x="order_date", y="quantity", color="category_name")
+  st.scater_chart(df, x="order_date", y="quantity", color="category_name")
 
 # Data preparations
 with st.sidebar:
@@ -73,7 +73,7 @@ with st.sidebar:
   # Encode
   encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
   df_sales = pd.get_dummies(input_sales, prefix=encode)
-  input_row = df_sales[1:1]
+  input_row = df_sales[:1]
 
 
 
