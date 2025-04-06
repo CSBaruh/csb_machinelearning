@@ -73,7 +73,7 @@ with st.sidebar:
   # Encode
   encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
   df_sales = pd.get_dummies(input_sales, prefix=encode)
-  input_row = df_sales[:2]
+  input_row = df_sales[:1]
 
 
 
