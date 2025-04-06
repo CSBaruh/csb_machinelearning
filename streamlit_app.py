@@ -13,11 +13,11 @@ df = df0.dropna(subset=['gender'])
 df = df.drop(['product_id', 'category_id'], axis=1)
 df['order_date'] = pd.to_datetime(df['order_date'])
 #df['date'] = df['order_date'].dt.strftime('%Y-%m')
-df = df.drop(['date'])
+df = df.drop(['date'], axis=1)
 
 with st.expander('Data'):
   st.write('**Raw data**')
-
+  df
 
   
   
