@@ -22,11 +22,11 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  X = df.drop('category_name', axis=1)
+  X = df.drop('quantity', axis=1)
   X
 
   st.write('**y**')
-  y = df.category_name
+  y = df.quantity
   y
   
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
@@ -58,7 +58,8 @@ with st.sidebar:
 
 
 # Create a Dataframe for the input features
-  data = {'product_name': product_name,
+  data = {'date': date,
+        'product_name': product_name,
         'price': price,
         'payment_method': payment_method,
         # 'city': city,
