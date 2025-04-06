@@ -136,7 +136,7 @@ st.dataframe(df_prediction_proba,
                  max_value=1
                ),
               'Sports & Outdoors': st.column_config.ProgressColumn(
-                 'Electronics',
+                 'Sports & Outdoors',
                  format='%f',
                  width='medium',
                  min_value=0,
