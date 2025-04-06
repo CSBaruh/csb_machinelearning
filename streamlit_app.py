@@ -131,35 +131,35 @@ st.dataframe(df_prediction_proba,
                'Electronics': st.column_config.ProgressColumn(
                  'Electronics',
                  format='%f',
-                 wifth='medium',
+                 width='medium',
                  min_value=0,
                  max_value=1
                ),
               'Sports & Outdoors': st.column_config.ProgressColumn(
                  'Electronics',
                  format='%f',
-                 wifth='medium',
+                 width='medium',
                  min_value=0,
                  max_value=1
                ),
               'Books & Stationery': st.column_config.ProgressColumn(
                  'Books & Stationery',
                  format='%f',
-                 wifth='medium',
+                 width='medium',
                  min_value=0,
                  max_value=1
                ),
               'Fashion': st.column_config.ProgressColumn(
                  'Fashion',
                  format='%f',
-                 wifth='medium',
+                 width='medium',
                  min_value=0,
                  max_value=1
                ),
               'Home & Living': st.column_config.ProgressColumn(
                  'Home & Living',
                  format='%f',
-                 wifth='medium',
+                 width='medium',
                  min_value=0,
                  max_value=1
                )
