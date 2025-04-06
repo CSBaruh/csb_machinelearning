@@ -106,7 +106,7 @@ with st.expander('Data preparation'):
 #  Model trainig and inference
 ## Train ML model
 clf = RandomForestClassifier()
-clf.fit(X_raw,y)
+clf.fit(df_sales,y)
 
 ## Apply model to make predictions
 predicition = clf.predict(input_row)
