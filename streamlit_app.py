@@ -58,7 +58,7 @@ with st.sidebar:
 
 
 # Create a Dataframe for the input features
-  data = {'date': order_date,
+  data = {'order_date': order_date,
         'product_name': product_name,
         'price': price,
         'payment_method': payment_method,
