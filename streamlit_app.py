@@ -120,6 +120,7 @@ prediction_proba.rename(columns={0: 'Electronics',
                                  2: 'Books & Stationery', 
                                  3: 'Fashion', 
                                  4: 'Home & Living'}
+                       )
 
 prediction_proba
 
