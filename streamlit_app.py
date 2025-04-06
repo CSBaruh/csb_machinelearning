@@ -8,7 +8,7 @@ st.info('This app buildes a machine learning model!')
 df0 = pd.read_csv('https://raw.githubusercontent.com/CSBaruh/Datas/refs/heads/main/synthetic_online_retail_data.csv')
 
 #df = df0.dropna(subset=['gender'])
-df = df0[df0['gender'].notna() & (df0['gender'] != 'None')]
+df = df0[df0['gender'].notna() & (df0['gender'] != 'Nan')]
 
 with st.expander('Data'):
   st.write('**Raw data**')
