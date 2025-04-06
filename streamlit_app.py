@@ -56,17 +56,21 @@ with st.sidebar:
         'age': age}
   input_df = pd.DataFrame(data, index=[0])
   input_sales = pd.concat([input_df, X], axis=0)
+  
+  # Encode
+  encode = ['category_name', 'payment_method', '', '', '', '']
+  df_sales = pd.get_dummies(input_sales, prefix=encode)
+  input_row = df_sales[:1]
+
+
+
 
 with st.expander('Input features'):
   st.write('**Input**')
   input_df
   st.write('**Combined**')
   input_sales
-
-# Encode
-
-encode = ['category_name', 'payment_method', '', '', '', '']
-df_sales = pd.get_dummies(input_sales, prefix=encode)
-df_sales[1:-1]
+  st.write('Encoded input sales')
+  input_row
 
 
