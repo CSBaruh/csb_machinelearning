@@ -67,4 +67,6 @@ with st.expander('Input features'):
 
 encode = ['category_name', 'payment_method', '', '', '', '']
 df_sales = pd.get_dummies(input_sales, prefix=encode)
-df_sales[:1]
+df_sales[1:-1]
+
+
