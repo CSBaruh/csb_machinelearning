@@ -33,7 +33,7 @@ with st.expander('Data'):
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
 with st.expander('Data Visualization'):
   #st.scatter_chart(data=df, x='quantity', y= 'product_name', color= 'category_name')
-  st.scater_chart(df, x="order_date", y="quantity", color="category_name")
+  st.scatter_chart(df, x="order_date", y="quantity", color="category_name")
 
 # Data preparations
 with st.sidebar:
