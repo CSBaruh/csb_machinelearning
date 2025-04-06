@@ -22,7 +22,8 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  X = df.drop('quantity', axis=1)
+  #X = df.drop('quantity', axis=1)
+  X = df.order_date
   X
 
   st.write('**y**')
