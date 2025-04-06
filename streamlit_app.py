@@ -10,7 +10,7 @@ df0 = pd.read_csv('https://raw.githubusercontent.com/CSBaruh/Datas/refs/heads/ma
 #df = df0.dropna(subset=['gender'])
 #df = df0[df0['gender'].notna() & (df0['gender'] != 'Nan')]
 df = df0.dropna(subset=['gender'])
-df = df.drop('product_id', 'category_id', axis=4)
+df = df.drop('product_id', 'category_id', axis=1)
 
 with st.expander('Data'):
   st.write('**Raw data**')
