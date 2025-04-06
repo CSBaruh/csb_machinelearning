@@ -82,6 +82,8 @@ with st.expander('Input features'):
 # Encode X
 encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
 df_sales = pd.get_dummies(input_sales, prefix=encode)
+
+X = df_sales[1:]
 input_row = df_sales[:1]
 
 # Encode y
@@ -106,7 +108,7 @@ with st.expander('Data preparation'):
 #  Model trainig and inference
 ## Train ML model
 clf = RandomForestClassifier()
-clf.fit(df_sales,y)
+clf.fit(X,y)
 
 ## Apply model to make predictions
 predicition = clf.predict(input_row)
