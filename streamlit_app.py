@@ -69,7 +69,7 @@ with st.sidebar:
   input_sales = pd.concat([input_df, X], axis=0)
   
   # Encode
-  encode = ['product_name', 'price', 'payment_method', 'gender', 'age']
+  encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
   df_sales = pd.get_dummies(input_sales, prefix=encode)
   input_row = df_sales[:1]
 
