@@ -26,7 +26,7 @@ with st.expander('Data'):
   X
 
   st.write('**y**')
-  y = df.product_Name
+  y = df.order_date
   y
   
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
