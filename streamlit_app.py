@@ -35,7 +35,7 @@ with st.expander('Data Visualization'):
   #st.scatter_chart(data=df, x='quantity', y= 'product_name', color= 'category_name')
   st.scatter_chart(df, x="quantity", y="category_name", color="product_name")
 
-# Data preparations
+# Input features
 with st.sidebar:
   st.header('Input features')
   category_name = st.selectbox('Category Name', ('Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living'))
@@ -69,7 +69,15 @@ with st.sidebar:
         'age': age}
   input_df = pd.DataFrame(data, index=[0])
   input_sales = pd.concat([input_df, X_raw], axis=0)
-  
+
+with st.expander('Input features'):
+  st.write('**Input**')
+  input_df
+  st.write('**Combined**')
+  input_sales
+
+
+# Data preparation
 # Encode X
 encode = ['category_name', 'product_name', 'price', 'payment_method', 'gender', 'age']
 df_sales = pd.get_dummies(input_sales, prefix=encode)
@@ -87,15 +95,11 @@ def target_encode(val):
   return target_mapper[val]
 
 y = y_raw.apply(target_encode)
-y
-y_raw
 
-with st.expander('Input features'):
-  st.write('**Input**')
-  input_df
-  st.write('**Combined**')
-  input_sales
-  st.write('Encoded input sales')
+with st.expander('Data preparation'):
+  st.write('**Encoded X (input sales)**')
   input_row
+  st.write('**Encoded y**')
+  y
 
 
