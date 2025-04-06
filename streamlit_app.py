@@ -12,7 +12,7 @@ df0 = pd.read_csv('https://raw.githubusercontent.com/CSBaruh/Datas/refs/heads/ma
 df = df0.dropna(subset=['gender'])
 df = df.drop(['product_id', 'category_id'], axis=1)
 df['date'] = pd.to_datetime(df['order_date'])
-df['year_month'] = df['order_date'].to_period('M')
+#df['year_month'] = df['order_date'].dt.to_period('M')
 
 with st.expander('Data'):
   st.write('**Raw data**')
