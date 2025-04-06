@@ -22,11 +22,11 @@ with st.expander('Data'):
   
   
   st.write('**X**')
-  X = df.drop('product_name', axis=1)
+  X = df.drop('quantity', axis=1)
   X
 
   st.write('**y**')
-  y = df.quantity
+  y = df.product_Name
   y
   
 # order_date,product_id,category_id,category_name,product_name,quantity,price,payment_method,city,review_score,gender,age
