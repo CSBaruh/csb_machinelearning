@@ -115,14 +115,7 @@ predicition = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)
 prediction_proba.columns = ['Electronics', 'Sports & Outdoors', 'Books & Stationery', 'Fashion', 'Home & Living']
 
-prediction_proba.rename(columns={0: 'Electronics', 
-                                 1: 'Sports & Outdoors', 
-                                 2: 'Books & Stationery', 
-                                 3: 'Fashion', 
-                                 4: 'Home & Living'}
-                       )
-
-prediction_proba
+df_prediction_proba = pd.Dataframe(prediction_proba)
 
 
 
